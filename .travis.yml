@@ -4,6 +4,6 @@ python:
 install:
   - pip install coverage
 script:
-  - pytest
   - coverage run test_rpn.py
+  - coveralls
   - pytest
