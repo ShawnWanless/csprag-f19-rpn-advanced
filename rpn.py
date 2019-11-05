@@ -31,7 +31,8 @@ def style(val):
 
 def calculate(myarg):
     stack = list()
-    for token in myarg.split():
+    args = myarg.split()
+    for token in args:
         try:
             token = int(token)
             stack.append(token)
@@ -42,8 +43,6 @@ def calculate(myarg):
             result = function(arg1, arg2)
             stack.append(result)
         print_list(stack)
-    if len(stack) != 1:
-        raise TypeError("Too many parameters")
     return stack.pop()
 
 def main():
