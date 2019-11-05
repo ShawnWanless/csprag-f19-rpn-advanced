@@ -32,6 +32,9 @@ def style(val):
 def calculate(myarg):
     stack = list()
     args = myarg.split()
+    if len(args) != 3:
+        print("Incorrect number of arguments")
+        return None
     for token in args:
         try:
             token = int(token)
